@@ -24,6 +24,7 @@ Route::get("/users/email/{email}", [UserController::class, "showByEmail"]);
 Route::get("/books/search/{title}", [BookController::class, "showByTitle"]);
 
 Route::apiResource('books', BookController::class);
-Route::post('/api/borrow', [BookController::class, 'borrowBook']);
+Route::post('/books/borrowBook', [BookController::class, 'borrowBook']);
+Route::post('/books/returnBook', [BookController::class, 'returnBook']);
 
-Route::apiResource('bookStatus', UserBookController::class);
+

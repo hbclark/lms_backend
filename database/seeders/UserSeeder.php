@@ -15,16 +15,8 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'memberType' => 'Admin',
-            'firstName' => 'Clark',
-            'lastName' => 'He',
-            'email' => 'skla2003@hotmail.com',
-            'password' => '123456',
-
-        ]);
 
         // Create 50 additional fake users with 'Member' role
-        User::factory()->count(50)->create();
+        User::factory()->count(10)->create();
     }
 }
